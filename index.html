@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Connect 4</h1>
+
+    <div id="setup">
+        <h2>Game Setup</h2>
+        <label>Player 1 Name: <input type="text" id="player1Name" placeholder="Player 1"></label><br><br>
+        <label>Player 1 Color: <input type="color" id="player1Color" value="#ff0000"></label><br><br>
+
+        <label>Player 2 Name: <input type="text" id="player2Name" placeholder="Player 2"></label><br><br>
+        <label>Player 2 Color: <input type="color" id="player2Color" value="#ffff00"></label><br><br>
+
+        <button id="startBtn">Start Game</button>
+    </div>
+
+    <div id="game" style="display:none;">
+        <h2 id="turn"></h2>
+        <h2 id="winner"></h2>
+        <div id="board"></div>
+        <button id="restartBtn">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

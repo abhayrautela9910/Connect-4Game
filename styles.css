@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+h1 {
+    margin: 20px 0;
+    color: rgb(166, 100, 19);
+}
+
+#setup {
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: inline-block;
+    background: #fff;
+}
+
+#turn {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+#winner {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: green;
+    text-shadow: 0 0 10px gold, 0 0 20px orange;
+    animation: winnerGlow 1s infinite alternate;
+}
+
+@keyframes winnerGlow {
+    from { transform: scale(1); color: gold; }
+    to { transform: scale(1.2); color: orange; }
+}
+
+#board {
+    height: 540px;
+    width: 630px;
+    background-color: blue;
+    border: 10px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    height: 80px;
+    width: 80px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.winning-tile {
+    box-shadow: 0 0 15px 5px gold;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+#restartBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+}
+
+#restartBtn:hover {
+    background: #555;
+}
